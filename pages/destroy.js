@@ -35,7 +35,7 @@ const Destroy = observer(({serverComets}) => {
             <OnlyDangers/>
             {!filteredAsteroids ? "Loading..." : filteredAsteroids.map(e => <AsteroidRow key={e.id} asteroid={e}
                                                                                          date={e.date} destroy/>)}
-            {filteredAsteroids &&
+            {filteredAsteroids.length > 0 &&
             <Row>
                 <Button
                     className={`${styles.toDestroyAll} btn btn-primary`}
