@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import {Col, Row} from "react-bootstrap";
 import Distance from "../distance/Distance";
 import {distanceContext} from "../../../stores/cometStore";
 import {observer} from "mobx-react-lite";

@@ -1,9 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Navigation from "./layouts/header/Header";
-import {Container} from "react-bootstrap";
 import Footer from "./layouts/footer/Footer";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MainContainer = ({children, description,keywords, title}) => {
     return (
