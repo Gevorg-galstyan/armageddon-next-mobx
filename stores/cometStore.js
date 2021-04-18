@@ -1,5 +1,5 @@
 import {makeAutoObservable, toJS} from "mobx";
-import {createContext} from "react";
+import {createContext, useState} from "react";
 import Cookie from 'mobx-cookie'
 
 class CometStore {
@@ -12,6 +12,7 @@ class CometStore {
     distance = true;
     onlyDangers = false;
     forDestroy = new Set(this.cookie.value ? [...JSON.parse(this.cookie.value)] : []);
+    cometNum =  10;
 
     changeDistance = () => {
         this.distance = !this.distance
@@ -36,7 +37,7 @@ class CometStore {
         Object.keys(comets).forEach(e => {
             comets[e].forEach(j => {
                 j.date = e;
-                cont.push(j)
+                cont.push(j);
             })
         })
         this.filteredAsteroids = cont.filter(e => this.forDestroy.has(e.id));
@@ -45,7 +46,11 @@ class CometStore {
     destroyAll = () => {
         this.forDestroy.clear();
         this.cookie.remove();
-        this.filteredAsteroids = []
+        this.filteredAsteroids = [];
+    }
+
+    setCometNum = (num) => {
+        this.cometNum = num;
     }
 
 }

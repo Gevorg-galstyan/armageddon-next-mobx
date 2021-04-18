@@ -5,6 +5,156 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/*CUSTOM BOOTSTRAP*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 0;
+}
+
+.headerNavLinks {
+    display: flex;
+}
+
+.navbarNav {
+    display: flex;
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mx-1 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.table-dark {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    background-color: #343a40;
+}
+
+.table-dark td, .table-dark th, .table-dark thead th {
+    border-color: #454d55;
+    text-align: inherit;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+}
+
+.table-bordered td, .table-bordered th {
+    border-bottom: 1px solid #454d55;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.col-lg {
+    width: 100%;
+}
+
+@media all and (min-width: 996px) {
+    .container {
+        width: 80%;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .mt-lg-0 {
+        margin-top: 0;
+    }
+
+    .col-lg {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+
+}
+
+/*/CUSTOM BOOTSTRAP/*/
+
+
 footer {
     padding: 56px 0 0;
 }
@@ -22,6 +172,7 @@ footer p {
 input.distanceRadio:checked + label {
     font-weight: 600;
 }
+
 input.distanceRadio:not(:checked) + label {
     text-decoration: underline;
 }
@@ -59,12 +210,14 @@ label[for='onlyDanger']::before {
 #onlyDanger:checked + label[for='onlyDanger']::before {
     content: '✔';
 }
-.filterDistance{
+
+.filterDistance {
     font-size: 16px;
     line-height: 20px;
     color: #000000;
 }
-.list-style-none{
+
+.list-style-none {
     list-style: none;
 }
 
@@ -76,19 +229,26 @@ label[for='onlyDanger']::before {
     min-height: 100%;
 }
 
-.backLink{
+.backLink {
     position: fixed;
     left: 20px;
     top: 20px;
     z-index: 999;
 }
 
-.color-white{
+.color-white {
     color: #fff !important;
 }
 
-@media all and (max-width: 996px){
-    .singleFilterContainer{
+
+@media all and (max-width: 996px) {
+    .singleFilterContainer {
         flex: 0 0 100%;
     }
+
+    .position-lg-relative {
+        position: relative;
+    }
+
 }
+

@@ -17,13 +17,13 @@ const AsteroidRow = observer(({asteroid, date, destroy}) => {
         return false
     }
     return (
-        <Row
+        <div
             className={`${styles.asteroidContainer} 
             ${asteroid.is_potentially_hazardous_asteroid ? styles.dangerAsteroid : styles.dontDangerAsteroid} 
-            align-items-center position-relative mb-3`}>
+            align-items-center position-relative mb-3 load-after-scroll row`}>
 
-            <Col className={'p-0 h-100 align-self-end'} lg>
-                <Link href={`/asteroid/[id]`} as={`/asteroid/${asteroid.id}`}>
+            <div className={'h-100 align-self-end col-lg position-lg-relative'}>
+                <Link href={`/asteroid/[id]`} as={`/asteroid/${asteroid.id}`} >
                     <a className={'text-decoration-none'}>
                         <div className={styles.asteroidImage}>
                             <img src={'/img/asteroid.svg'} alt="" width={width}
@@ -34,17 +34,19 @@ const AsteroidRow = observer(({asteroid, date, destroy}) => {
                         </div>
                     </a>
                 </Link>
-            </Col>
-            <Col lg>
+            </div>
+            <div className={'col-lg'}>
                 <Link href={`/asteroid/[id]`} as={`/asteroid/${asteroid.id}`}>
                     <a className={'text-decoration-none'}>
                         <h2 className={styles.asteroidName}>{name}</h2>
 
                         <ul className={styles.asteroidParams}>
+                            {date &&
                             <li>
                                 <span>Дата</span>
                                 <span>{date}</span>
                             </li>
+                            }
                             <li>
                                 <span>Расстояние</span>
                                 <span>{fractional(Math.round(distance ? asteroid.close_approach_data[0].miss_distance.kilometers : asteroid.close_approach_data[0].miss_distance.lunar))} {distance ? 'км' : "лунный"}</span>
@@ -56,8 +58,8 @@ const AsteroidRow = observer(({asteroid, date, destroy}) => {
                         </ul>
                     </a>
                 </Link>
-            </Col>
-            <Col lg>
+            </div>
+            <div className={'col-lg'}>
                 <div className={styles.dangerRating}>
                     <p className={'m-0'}>Оценка:</p>
                     <span>{asteroid.is_potentially_hazardous_asteroid ? "опасен" : 'не опасен'}</span>
@@ -82,8 +84,8 @@ const AsteroidRow = observer(({asteroid, date, destroy}) => {
 
                 </div>
 
-            </Col>
-        </Row>
+            </div>
+        </div>
     );
 });
 

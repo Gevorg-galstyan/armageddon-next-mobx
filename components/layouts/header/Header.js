@@ -11,7 +11,7 @@ const Header = observer(() => {
 
     return (
         <header>
-            <Navbar bg="transparent" expand="lg" className={`container ${styles.headerContainer}`}>
+            <nav className={`container ${styles.headerContainer}`}>
                 <Link href="/">
                     <a className={`${styles.logo} navbar-brand`}>
                         <h1 className={styles.generalHeading}>ARMAGGEDON V</h1>
@@ -21,8 +21,8 @@ const Header = observer(() => {
                 </Link>
 
 
-                <Navbar.Collapse className={'show'} id="basic-navbar-nav">
-                    <Nav className={`${styles.headerNavLinks} ml-auto`}>
+                <div className={'navbarNav'}>
+
                         <Link href={'/'}>
                             <a className={styles.navLink}>
                                 Астероиды
@@ -39,9 +39,8 @@ const Header = observer(() => {
                             </a>
 
                         </Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+                </div>
+            </nav>
         </header>
     )
 })

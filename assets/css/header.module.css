@@ -36,17 +36,19 @@
     color: #000000;
 }
 
-.headerContainer{
-    padding: 0 !important;
+.headerContainer {
+    display: flex;
+    align-items: flex-end;
     padding-top: 37px !important;
     padding-bottom: 24px !important;
     border-bottom: 1px solid #000000;
 }
 
-.destruct{
+.destruct {
     position: relative;
 }
-.destruct span{
+
+.destruct span {
     content: '';
     position: absolute;
     display: flex;
@@ -62,15 +64,22 @@
     font-size: 11px;
 }
 
+
 @media all and (max-width: 996px) {
-    .headerNavLinks{
+    .headerNavLinks {
         align-items: center !important;
         justify-content: flex-start;
         flex-direction: row !important;
     }
-    .navLink{
+
+    .navLink {
         padding: 0;
         margin-right: 24px;
     }
 
+    .headerContainer {
+        display: block;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }

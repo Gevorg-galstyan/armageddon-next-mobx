@@ -18,14 +18,13 @@ const AsteroidSingle = ({serverComet}) => {
         }
         !asteroid && load()
     }, [])
-
     return (
         <MainContainer title={asteroid && asteroid.name}>
             <OnlyDangers/>
             {!asteroid ? "Loading..." :
                 (
                     <>
-                        <AsteroidRow asteroid={asteroid} date={'4-4'} />
+                        <AsteroidRow asteroid={asteroid}  />
                         <AsteroidDetails asteroid={asteroid} />
                     </>
                 )

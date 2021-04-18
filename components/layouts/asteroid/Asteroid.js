@@ -1,22 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import {dateFormat} from "../../../helpers/utils";
 import AsteroidRow from '../asteroidRow/AsteroidRow';
 import OnlyDangers from "../onlyDangers/OnlyDangers";
 
-const Asteroid = ({asteroids}) => {
-    let content = [];
+const Asteroid = ({asteroids, cometNum}) => {
 
+    let content = [], date;
     for (const key in asteroids) {
-        const date = dateFormat(key)
-        const singleAsteroid = asteroids[key].map(single => <AsteroidRow key={single.id} asteroid={single} date={date}/>)
-        content.push(singleAsteroid)
+        date = dateFormat(key)
+        asteroids[key].map(single => content.push(single))
     }
-
-
+    console.log(cometNum)
     return (
         <>
             <OnlyDangers/>
-            {content}
+            { content.slice(0, cometNum).map(e => <AsteroidRow key={e.id} asteroid={e} date={date}/>) }
         </>
     );
 }
