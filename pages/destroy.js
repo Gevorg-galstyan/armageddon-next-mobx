@@ -35,14 +35,14 @@ const Destroy = observer(({serverComets}) => {
             {!filteredAsteroids ? "Loading..." : filteredAsteroids.map(e => <AsteroidRow key={e.id} asteroid={e}
                                                                                          date={e.date} destroy/>)}
             {filteredAsteroids.length > 0 &&
-            <Row>
-                <Button
+            <div className={'row'}>
+                <button
                     className={`${styles.toDestroyAll} btn btn-primary`}
                     onClick={()=>handleDeleteAll()}
                 >
                     заказать бригаду Брюса
-                </Button>
-            </Row>
+                </button>
+            </div>
             }
 
             {

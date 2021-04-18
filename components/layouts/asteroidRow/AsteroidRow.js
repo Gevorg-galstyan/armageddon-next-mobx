@@ -66,19 +66,19 @@ const AsteroidRow = observer(({asteroid, date, destroy}) => {
                 <div className={'text-center'}>
                     {
                         destroy ?
-                            <Button
+                            <button
                                 className={`${styles.toDestroy} btn btn-primary`}
                                 onClick={() => addToDestroy(asteroid.id)}
                             >
                                 Уничтожить
-                            </Button> :
-                            <Button
+                            </button> :
+                            <button
                                 className={`${styles.toDestroy} btn btn-primary`}
                                 onClick={() => addToDestroy(asteroid.id)}
                                 disabled={forDestroy.has(asteroid.id)}
                             >
                                 {forDestroy.has(asteroid.id) ? 'В списке' : "На уничтожение"}
-                            </Button>
+                            </button>
                     }
 
                 </div>

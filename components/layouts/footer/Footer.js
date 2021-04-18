@@ -5,11 +5,11 @@ export default function Footer(){
 
     return(
         <footer>
-            <Container>
-                <Row>
+            <div className={'container'}>
+                <div className={'row'}>
                     <p className={'text-center w-100'}>2021 © Все права и планета защищены</p>
-                </Row>
-            </Container>
+                </div>
+            </div>
         </footer>
     )
 }

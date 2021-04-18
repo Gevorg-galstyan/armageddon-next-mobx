@@ -131,7 +131,13 @@ button {
 .col-lg {
     width: 100%;
 }
-
+.text-center{
+    text-align: center;
+}
+button:disabled{
+    opacity: .6;
+    cursor: inherit;
+}
 @media all and (min-width: 996px) {
     .container {
         width: 80%;

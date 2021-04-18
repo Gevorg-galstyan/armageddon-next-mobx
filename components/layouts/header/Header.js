@@ -12,7 +12,7 @@ const Header = observer(() => {
         <header>
             <nav className={`container ${styles.headerContainer}`}>
                 <Link href="/">
-                    <a className={`${styles.logo} navbar-brand`}>
+                    <a className={`${styles.logo} navbar-brand text-decoration-none`}>
                         <h1 className={styles.generalHeading}>ARMAGGEDON V</h1>
                         <p className={styles.pageDescription}>Сервис мониторинга и уничтожения астероидов, опасно
                             подлетающих к Земле.</p>

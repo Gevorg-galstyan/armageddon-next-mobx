@@ -15,9 +15,9 @@ const MainContainer = ({children, description,keywords, title}) => {
 
             <Navigation />
 
-            <Container>
+            <div className={'container'}>
                 { children }
-            </Container>
+            </div>
 
             <Footer/>
         </>

@@ -8,7 +8,7 @@ const Distance = observer(() => {
     const distance = useContext(distanceContext);
 
     return (
-        <Col className={'ml-auto p-0 mt-lg-0 mt-3'} lg>
+        <div className={'ml-auto p-0 mt-lg-0 mt-3 col-lg'}>
             <div className={'d-flex align-items-center justify-content-end flex-wrap filterDistance'}>
                 <div className={'singleFilterContainer'}>
                     <span>Расстояние</span>
@@ -39,7 +39,7 @@ const Distance = observer(() => {
                 </div>
 
             </div>
-        </Col>
+        </div>
 
     )
 })
