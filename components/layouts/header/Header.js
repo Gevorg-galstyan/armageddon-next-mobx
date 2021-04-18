@@ -1,5 +1,4 @@
 import React, {useContext} from "react";
-import {Nav, Navbar} from "react-bootstrap";
 import {distanceContext} from "../../../stores/cometStore";
 import Link from "next/link";
 import styles from '../../../assets/css/header.module.css';

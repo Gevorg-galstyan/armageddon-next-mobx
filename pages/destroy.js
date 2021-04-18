@@ -3,7 +3,6 @@ import Link from "next/link";
 import AsteroidRow from "../components/layouts/asteroidRow/AsteroidRow";
 import OnlyDangers from "../components/layouts/onlyDangers/OnlyDangers";
 import {distanceContext} from "../stores/cometStore";
-import {Button, Row} from "react-bootstrap";
 import {useContext, useEffect, useState} from "react";
 import {request} from "../helpers/request";
 import {observer} from "mobx-react-lite";
